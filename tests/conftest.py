@@ -2,6 +2,7 @@ import pytest
 import json
 from pathlib import Path
 
+
 @pytest.fixture
 def operations_json():
     # Use pathlib to construct the path
@@ -22,11 +23,3 @@ list_dict = [
 @pytest.fixture
 def json_list():
     return list_dict.copy()
-
-
-# @pytest.fixture
-# def operations_json():
-#     # Загрузка JSON из файла
-#     with open('../data/operations.json', encoding='utf-8') as f:
-#         json_data = json.load(f)
-#     return json_data
