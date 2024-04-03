@@ -8,8 +8,6 @@ def open_json():
     """
     with open('../data/operations.json', encoding='utf-8') as f:
         json_list = json.load(f)
-    # with open("operations.json", encoding="utf-8") as file:
-    #     json_list = json.load(file)
     return json_list
 
 
@@ -25,9 +23,7 @@ def operations_filtered(json_list: list[dict]) -> list[dict]:
             list_filtered.append(i)
     return list_filtered
 
-# data_list = open_json()
-# operations = operations_filtered(data_list)
-# print(operations[1]['state'])
+
 def operations_sorted(list_filtered: list[dict]) -> list[dict]:
     """
     sort by completed operations and reverse list[dict]
