@@ -1,12 +1,14 @@
 import json
 from datetime import datetime as dt
+from pathlib import Path
 
 
 def open_json():
     """
     Открываем json на чтение
     """
-    with open('../data/operations.json', encoding='utf-8') as f:
+    file_path = Path(__file__).parent / "../data/operations.json"
+    with open(file_path, encoding='utf-8') as f:
         json_list = json.load(f)
     return json_list
 
